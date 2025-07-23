@@ -7,7 +7,7 @@ A collection of dotfiles and aliases to enhance your shell experience.
 You can download and install these dotfiles with a single command:
 
 ```bash
-bash <(curl -s https://raw.githubusercontent.com/miguel/dotfiles-aliases/main/install.sh)
+bash <(curl -s https://raw.githubusercontent.com/Miangame/dotfiles/refs/heads/main/install.sh)
 ```
 
 This will automatically download and set up all the configurations and aliases included in this repository.
