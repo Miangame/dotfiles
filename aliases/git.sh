@@ -1,0 +1,15 @@
+# Git
+alias gaa="git add ."
+alias gc="git commit"
+alias gco="git checkout"
+alias gcob="git checkout -b"
+alias gs="git status -sb"
+alias gf="git fetch --all -p"
+alias gps="git push"
+alias gpsf="git push --force"
+alias gpsfl="git push --force-with-lease"
+alias gr="git rebase"
+alias gb="git branch"
+alias gl="$DOTLY_PATH/bin/dot git pretty-log"
+alias remember="$DOTLY_PATH/bin/dot git remember"
+alias gbda='git branch --no-color --merged | command grep -vE "^([+*]|\s*($(git_main_branch)|$(git_develop_branch))\s*$)" | command xargs git branch -d 2>/dev/null'
