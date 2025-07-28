@@ -19,7 +19,7 @@ cat >> "$ZSHRC" << 'EOF'
 
 # FZF Configuration
 export FZF_DEFAULT_OPTS='--height 40% --layout=reverse --border'
-export FZF_CTRL_R_OPTS='--sort --exact --preview "echo {}" --preview-window down:3:hidden:wrap --bind "?:toggle-preview"'
+export FZF_CTRL_R_OPTS='--reverse --tac --exact --preview "echo {}" --preview-window down:3:hidden:wrap --bind "?:toggle-preview"'
 
 # Cargar fzf key bindings
 if [[ -f ~/.fzf.zsh ]]; then
@@ -40,7 +40,7 @@ if ! typeset -f __fzf_history__ &>/dev/null; then
     # Definir función manual para Ctrl+R
     __fzf_history__() {
         local selected
-        selected=$(fc -rl 1 | awk '{ cmd=$0; sub(/^[ \t]*[0-9]+\**[ \t]*/, "", cmd); if (!seen[cmd]++) print $0 }' | fzf --tac --no-sort --height=40% --reverse --query="$LBUFFER" --expect=ctrl-r)
+        selected=$(fc -rl 1 | awk '{ cmd=$0; sub(/^[ \t]*[0-9]+\**[ \t]*/, "", cmd); if (!seen[cmd]++) print $0 }' | fzf --reverse --tac --no-sort --height=40% --query="$LBUFFER" --expect=ctrl-r)
         local ret=$?
         if [ -n "$selected" ]; then
             local num=$(echo "$selected" | head -1)

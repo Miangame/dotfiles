@@ -75,7 +75,7 @@ source ~/.zsh-plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # Configuración de fzf para búsqueda mejorada en historial
 export FZF_DEFAULT_OPTS='--height 40% --layout=reverse --border'
-export FZF_CTRL_R_OPTS='--sort --exact --preview "echo {}" --preview-window down:3:hidden:wrap --bind "?:toggle-preview"'
+export FZF_CTRL_R_OPTS='--reverse --tac --exact --preview "echo {}" --preview-window down:3:hidden:wrap --bind "?:toggle-preview"'
 
 # Cargar fzf key bindings y completion
 if [[ -f ~/.fzf.zsh ]]; then
